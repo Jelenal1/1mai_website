@@ -9,9 +9,9 @@ export default function Sidenav({
 }) {
   return (
     <div
-      className={`fixed flex flex-col top-0 ${
+      className={`fixed top-0 flex flex-col ${
         open ? "right-0" : "-right-full"
-      } w-36 h-screen bg-white border-l-2 border-black transition-all duration-300`}
+      } h-screen w-36 border-l-2 border-black bg-white transition-all duration-300`}
     >
       <button
         className="mx-auto mt-5 w-fit"

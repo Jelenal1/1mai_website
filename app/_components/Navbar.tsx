@@ -8,13 +8,13 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sticky flex items-center top-0 w-full h-20 border-b-2 border-black">
-      <h1 className="text-2xl ml-2 hover:cursor-pointer">1 Mai Winterthur</h1>
+    <div className="sticky top-0 flex h-20 w-full items-center border-b-2 border-black">
+      <h1 className="ml-2 text-2xl hover:cursor-pointer">1 Mai Winterthur</h1>
       <button className="ml-auto mr-2 lg:hidden" onClick={() => setOpen(true)}>
         <FiMenu size={30} />
       </button>
       <Sidenav open={open} setOpen={setOpen} />
-      <div className="lg:flex ml-20 gap-10 text-xl hidden">
+      <div className="ml-20 hidden gap-10 text-xl lg:flex">
         <button onClick={() => redirect("/")}>Home</button>
         <button onClick={() => redirect("/")}>Mitmachen</button>
         <button onClick={() => redirect("/")}>Spenden</button>
