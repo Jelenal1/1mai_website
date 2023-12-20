@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 flex h-20 w-full items-center border-b-2 border-black">
+    <div className="sticky top-0 flex h-20 w-full items-center border-b-2 border-black bg-slate-200 px-2">
       <h1 className="ml-2 text-2xl hover:cursor-pointer">1 Mai Winterthur</h1>
       <button className="ml-auto mr-2 lg:hidden" onClick={() => setOpen(true)}>
         <FiMenu size={30} />
