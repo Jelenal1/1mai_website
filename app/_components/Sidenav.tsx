@@ -11,7 +11,7 @@ export default function Sidenav({
     <div
       className={`fixed top-0 flex flex-col ${
         open ? "right-0" : "-right-full"
-      } h-screen w-36 border-l-2 border-black bg-white transition-all duration-300`}
+      } h-screen w-36 border-l-2 border-black backdrop-blur transition-all duration-300`}
     >
       <button
         className="mx-auto mt-5 w-fit"
