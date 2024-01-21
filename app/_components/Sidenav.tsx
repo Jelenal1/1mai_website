@@ -9,8 +9,8 @@ export default function Sidenav({
 }) {
   return (
     <div
-      className={`fixed top-0 flex flex-col ${
-        open ? "right-0" : "-right-full"
+      className={`fixed top-0 z-20 flex flex-col ${
+        open ? "right-0" : "hidden"
       } h-screen w-36 border-l-2 border-black backdrop-blur transition-all duration-300`}
     >
       <button

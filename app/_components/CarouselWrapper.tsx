@@ -9,7 +9,7 @@ export default function CarouselWrapper({
   images: ReactElement[];
 }) {
   return (
-    <Carousel className="max-w-[800px]" showArrows={true}>
+    <Carousel className="-z-10 max-w-[800px]" showArrows={true}>
       {images.map((image, key) => (
         <div key={key}>{image}</div>
       ))}
