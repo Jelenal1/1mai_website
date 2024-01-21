@@ -1,3 +1,4 @@
+"use client";
 import { FiX } from "react-icons/fi";
 
 export default function Sidenav({
@@ -9,22 +10,26 @@ export default function Sidenav({
 }) {
   return (
     <div
-      className={`fixed top-0 z-20 flex flex-col ${
-        open ? "right-0" : "hidden"
-      } h-screen w-36 border-l-2 border-black backdrop-blur transition-all duration-300`}
+      className={
+        open
+          ? "fixed right-0 top-0 h-screen w-screen items-center bg-opacity-60 backdrop-blur transition-all ease-in"
+          : "invisible fixed right-0 top-0 h-screen w-screen items-center bg-opacity-60 opacity-0 backdrop-blur transition-all duration-200 ease-out"
+      }
     >
-      <button
-        className="mx-auto mt-5 w-fit"
-        onClick={() => {
-          setOpen(false);
-        }}
-      >
-        <FiX size={30} />
-      </button>
-      <button className="mx-auto mt-5 text-xl">Home</button>
-      <button className="mx-auto mt-5 text-xl">Mitmachen</button>
-      <button className="mx-auto mt-5 text-xl">Spenden</button>
-      <button className="mx-auto mt-5 text-xl">Archiv</button>
+      <div className="flex flex-col items-center">
+        <button
+          className="mx-auto mt-5 w-fit"
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          <FiX size={30} />
+        </button>
+        <button className="mx-auto mt-5 text-xl">Home</button>
+        <button className="mx-auto mt-5 text-xl">Mitmachen</button>
+        <button className="mx-auto mt-5 text-xl">Spenden</button>
+        <button className="mx-auto mt-5 text-xl">Archiv</button>
+      </div>
     </div>
   );
 }

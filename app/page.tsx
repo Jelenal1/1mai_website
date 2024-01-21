@@ -3,7 +3,7 @@ import CarouselWrapper from "./_components/CarouselWrapper";
 
 export default function Home() {
   return (
-    <main className="mx-9 flex flex-col items-center">
+    <main className="mx-9 mb-10 flex flex-col items-center">
       <h1 className="my-2 text-2xl font-bold lg:text-3xl">
         1 Mai Winterthur 2023
       </h1>
@@ -62,22 +62,7 @@ export default function Home() {
         statt Autos und mehr kostengünstigem, genossenschaftlichem Wohnen!
       </p>
       <CarouselWrapper
-        images={[
-          <Image
-            src="/alles_fuer_alle_banner.png"
-            alt="1mai"
-            width={800}
-            height={800}
-            className="w-full"
-          />,
-          <Image
-            src="/alles_fuer_alle_banner.png"
-            alt="1mai"
-            width={800}
-            height={800}
-            className="w-full"
-          />,
-        ]}
+        images={["/alles_fuer_alle_banner.png", "/alles_fuer_alle_banner.png"]}
       />
     </main>
   );
