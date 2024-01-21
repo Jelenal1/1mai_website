@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CarouselWrapper from "./_components/CarouselWrapper";
 
 export default function Home() {
   return (
@@ -60,6 +61,24 @@ export default function Home() {
         spätestens 2040, einem kommunalen Mindestlohn, mehr öffentlichem Verkehr
         statt Autos und mehr kostengünstigem, genossenschaftlichem Wohnen!
       </p>
+      <CarouselWrapper
+        images={[
+          <Image
+            src="/alles_fuer_alle_banner.png"
+            alt="1mai"
+            width={800}
+            height={800}
+            className="w-full"
+          />,
+          <Image
+            src="/alles_fuer_alle_banner.png"
+            alt="1mai"
+            width={800}
+            height={800}
+            className="w-full"
+          />,
+        ]}
+      />
     </main>
   );
 }
