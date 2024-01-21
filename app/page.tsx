@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center">
+    <main className="mx-9 flex flex-col items-center">
       <h1 className="my-2 text-2xl font-bold lg:text-3xl">
         1 Mai Winterthur 2023
       </h1>
