@@ -62,7 +62,13 @@ export default function Home() {
         statt Autos und mehr kostengünstigem, genossenschaftlichem Wohnen!
       </p>
       <CarouselWrapper
-        images={["/alles_fuer_alle_banner.png", "/alles_fuer_alle_banner.png"]}
+        images={[
+          "/DSC_0637.jpeg",
+          "/DSC_0644.jpeg",
+          "/DSC_0665.jpeg",
+          "/DSC_0670.jpeg",
+          "/DSC_0672.jpeg",
+        ]}
       />
     </main>
   );

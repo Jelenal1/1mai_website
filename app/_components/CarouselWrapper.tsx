@@ -8,19 +8,19 @@ export default function CarouselWrapper({ images }: { images: string[] }) {
     <>
       <Carousel
         showArrows={true}
-        className="z-0 max-w-[800px]"
+        className="z-0 flex max-w-[800px] items-center"
         autoPlay
         infiniteLoop
         showThumbs={false}
       >
         {images.map((url, index) => (
-          <div key={index}>
+          <div key={index} className="h-fit">
             <Image
               src={url}
               width={500}
               height={500}
               alt="Apartment"
-              className="z-0 mx-auto"
+              className="z-0 object-contain"
             />
           </div>
         ))}
