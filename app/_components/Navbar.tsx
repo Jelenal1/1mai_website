@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import Sidenav from "./Sidenav";
+import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -15,10 +16,11 @@ export default function Navbar() {
       </button>
       <Sidenav open={open} setOpen={setOpen} />
       <div className="ml-20 hidden gap-10 text-xl lg:flex">
-        <button onClick={() => redirect("/")}>Home</button>
-        <button onClick={() => redirect("/")}>Mitmachen</button>
-        <button onClick={() => redirect("/")}>Spenden</button>
-        <button onClick={() => redirect("/")}>Archiv</button>
+        <Link href={"/"}>Home</Link>
+        <Link href={"/mitmachen"}>Mitmachen</Link>
+        <Link href={"/spenden"}>Spenden</Link>
+        <Link href={"/ueber-uns"}>Über uns</Link>
+        <Link href={"/archive"}>Archiv</Link>
       </div>
     </div>
   );
