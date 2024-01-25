@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-export default function CarouselImages({ images }: { images: string[] }) {
+export default function CarouselWrapper({ images }: { images: string[] }) {
   return (
     <>
       <Carousel
