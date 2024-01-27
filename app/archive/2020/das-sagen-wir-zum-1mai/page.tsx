@@ -1,0 +1,54 @@
+import Link from "next/link";
+export default function page() {
+  return (
+    <main className="mx-9 mb-10 flex flex-col items-center">
+      <div className="flex max-w-[800px] flex-col items-center">
+        <h2 className="my-2 text-xl font-bold">
+          Unsere Forderungen zum 1. Mai 2020
+        </h2>
+        <p className="mb-2">
+          Sende auch Du uns Deine Aussage, oder eine Videobotschaft{" "}
+          <Link
+            href={"/mitmachen"}
+            className="text-blue-600 underline hover:text-purple-600"
+          >
+            hier
+          </Link>{" "}
+          - oder über auch über{" "}
+          <Link
+            href={
+              "https://www.facebook.com/people/1-Mai-Winterthur/100064510579558/"
+            }
+            className="text-blue-600 underline hover:text-purple-600"
+          >
+            Facebook
+          </Link>
+        </p>
+        <div>
+          <iframe
+            width="800"
+            height="515"
+            src="https://www.youtube-nocookie.com/embed/hO0ujtFgEps?si=jONkV2wAvimBkmkA"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+          <div style={{ position: "relative", paddingTop: "56.25%" }}>
+            <iframe
+              src="https://player.vimeo.com/video/413946055?h=62b3acba72"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+              }}
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
