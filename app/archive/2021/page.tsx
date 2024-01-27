@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function page() {
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
-      <div>
+      <div className="flex max-w-[800px] flex-col items-center">
         <h1 className="my-2 text-2xl font-bold lg:text-3xl">
           1 Mai Winterthur 2021
         </h1>
