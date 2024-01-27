@@ -40,7 +40,7 @@ export default function Navbar() {
       >
         <Link href={"/archive/2023"}>2023</Link>
         <Link href={"/archive/2021"}>2021</Link>
-        <Link href={"/archive/2023"}>2020</Link>
+        <Link href={"/archive/2020"}>2020</Link>
       </div>
     </div>
   );

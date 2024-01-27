@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -15,13 +14,7 @@ export default function CarouselWrapper({ images }: { images: string[] }) {
       >
         {images.map((url, index) => (
           <div key={index} className="h-fit">
-            <Image
-              src={url}
-              width={500}
-              height={500}
-              alt="Apartment"
-              className="z-0 object-contain"
-            />
+            <img src={url} alt="Apartment" className="z-0 object-contain" />
           </div>
         ))}
       </Carousel>
