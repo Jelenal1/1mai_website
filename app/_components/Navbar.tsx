@@ -33,13 +33,14 @@ export default function Navbar() {
       </div>
       <div
         className={
-          openArchiv ? "mb-5 ml-[740px] hidden lg:flex lg:flex-col" : "hidden"
+          openArchiv
+            ? "ml-[738px] hidden w-fit gap-2 border-t border-black transition-all lg:flex"
+            : "invisible flex w-fit gap-2 transition-all"
         }
       >
-        <Link href={"/archive/2023"} className="my-2">
-          2023
-        </Link>
-        <Link href={"/archive/2023"}>2022</Link>
+        <Link href={"/archive/2023"}>2023</Link>
+        <Link href={"/archive/2023"}>2021</Link>
+        <Link href={"/archive/2023"}>2020</Link>
       </div>
     </div>
   );
