@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 export default function page() {
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
-      <div className="flex max-w-[800px] flex-col items-center">
+      <div className="flex max-w-[800px] flex-col items-center gap-2">
         <h2 className="my-2 text-xl font-bold">
           Unsere Forderungen zum 1. Mai 2020
         </h2>
@@ -24,31 +25,69 @@ export default function page() {
             Facebook
           </Link>
         </p>
-        <div>
+        <div
+          style={{
+            position: "relative",
+            paddingTop: "56.25%",
+            maxWidth: "800px",
+            width: "100%",
+          }}
+        >
           <iframe
-            width="800"
-            height="515"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: -30,
+              width: "100%",
+              height: "100%",
+            }}
             src="https://www.youtube-nocookie.com/embed/hO0ujtFgEps?si=jONkV2wAvimBkmkA"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            className="mx-9"
           ></iframe>
-          <div style={{ position: "relative", paddingTop: "56.25%" }}>
-            <iframe
-              src="https://player.vimeo.com/video/413946055?h=62b3acba72"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-              }}
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
+        </div>
+        <div
+          style={{
+            position: "relative",
+            paddingTop: "56.25%",
+            maxWidth: "800px",
+            width: "100%",
+          }}
+        >
+          <iframe
+            src="https://player.vimeo.com/video/413946055?h=62b3acba72"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
+      <Image
+        src={"/1mai_testimonials/PP_Dennler.jpg"}
+        width={800}
+        height={1000}
+        alt="PP"
+      />
+      <Image
+        src={"/1mai_testimonials/120501_1mai_Testimonials_093.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120501_1mai_Testimonials_092.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
     </main>
   );
 }
