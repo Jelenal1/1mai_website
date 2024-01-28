@@ -88,6 +88,29 @@ export default function page() {
         height={1000}
         alt="1 Mai Testimonial"
       />
+      <div
+        style={{
+          position: "relative",
+          paddingTop: "56.25%",
+          maxWidth: "800px",
+          width: "100%",
+          minWidth: "400px",
+        }}
+      >
+        <iframe
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            minWidth: "400px",
+          }}
+          src="https://player.vimeo.com/video/413911048?h=2535b45640"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
     </main>
   );
 }
