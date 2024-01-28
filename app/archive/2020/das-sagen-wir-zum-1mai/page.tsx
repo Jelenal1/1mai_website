@@ -37,7 +37,7 @@ export default function page() {
             style={{
               position: "absolute",
               top: 0,
-              left: -30,
+              left: -37,
               width: "100%",
               height: "100%",
             }}
