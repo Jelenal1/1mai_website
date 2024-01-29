@@ -1,9 +1,66 @@
+import {
+  DocumentReference,
+  collection,
+  getDoc,
+  getDocs,
+} from "firebase/firestore";
+import { db } from "@/app/_components/firebase";
 import Blogpostpreview from "../_components/Blogpostpreview";
-export default function Blog() {
+import Link from "next/link";
+
+export type author = {
+  sirname: string;
+  name: string;
+  role: string;
+  uuid: string;
+};
+
+export type article = {
+  id: string;
+  title: string;
+  description: string;
+  content: string;
+  date: string;
+  author: DocumentReference<author>;
+};
+export type articlewithauthor = {
+  id: string;
+  title: string;
+  description: string;
+  content: string;
+  date: string;
+  author: author;
+};
+
+export default async function Blog() {
+  const querySnapshot = await getDocs(collection(db, "articles"));
+  async function getArticles() {
+    const articles: articlewithauthor[] = [];
+    for (const doc of querySnapshot.docs) {
+      const authorPromise = await getDoc(doc.data().author);
+      const author = authorPromise.data() as author;
+      articles.push({
+        id: doc.id,
+        title: doc.data().title,
+        description: doc.data().description,
+        content: doc.data().content,
+        date: doc.data().date,
+        author: author,
+      });
+    }
+    return articles;
+  }
+
+  const articles = await getArticles();
+
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
       <h2 className="mb-3 text-xl font-bold lg:text-2xl">Blog</h2>
-      <Blogpostpreview />
+      {articles.map((article: articlewithauthor) => (
+        <Link key={article.id} href={`/blog/${article.id.toString()}`}>
+          <Blogpostpreview key={article.id} article={article} />
+        </Link>
+      ))}
     </main>
   );
 }
