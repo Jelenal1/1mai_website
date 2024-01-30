@@ -1,7 +1,7 @@
 import { db } from "@/app/_components/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { redirect } from "next/navigation";
-import { article, author } from "../page";
+import { article } from "../page";
 import Image from "next/image";
 
 export default async function page({ params }: { params: { id: string } }) {
@@ -9,9 +9,6 @@ export default async function page({ params }: { params: { id: string } }) {
   const docRef = doc(db, "articles", id);
   const docSnap = await getDoc(docRef);
   const articleData = docSnap.data() as article;
-  const authorRef = articleData.author;
-  const authorDoc = await getDoc(authorRef);
-  const authorData = authorDoc.data()!;
   if (!docSnap.exists()) redirect("/blog");
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
@@ -19,9 +16,7 @@ export default async function page({ params }: { params: { id: string } }) {
         <h1 className="mt-2 text-2xl font-bold lg:text-3xl">
           {articleData.title}
         </h1>
-        <h2 className="text-sm">
-          {authorData.name + " " + authorData.sirname}
-        </h2>
+        <h2 className="text-sm">{articleData.author}</h2>
         <Image
           src="/alles_fuer_alle_banner.png"
           width={800}
