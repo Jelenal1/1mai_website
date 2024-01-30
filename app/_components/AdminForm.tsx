@@ -1,12 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { article, author } from "../blog/page";
-import { collection, getDocs, query, where } from "firebase/firestore";
-import { auth, db } from "./firebase";
-import { useRouter } from "next/router";
-import { onAuthStateChanged } from "firebase/auth";
+import { useState } from "react";
 
 export default function AdminForm({
   handleFormsData,
@@ -17,41 +12,36 @@ export default function AdminForm({
     title: "",
     description: "",
     content: "",
-    date: "",
-  } as article);
-
-  const [currentUid, setCurrentUid] = useState("");
-  const [authorData, setAuthorData] = useState({
-    name: "",
-    sirname: "",
+    date: new Date().toLocaleDateString("de-DE"),
+    author: {
+      name: "",
+      sirname: "",
+    },
   });
-
-  useEffect(() => {
-
-    async function getAuthorData() {
-      const q = query(collection(db, "authors"));
-      const querySnapshot = await getDocs(q);
-      const data = querySnapshot.forEach((doc) => {
-        const uid = doc.data().uid;
-        console.log(uid);
-        console.log(currentUid);
-        if (doc.data().uid.toString() === currentUid) {
-          return doc.data();
-        }
-      });
-      console.log(data);
-    }
-    getAuthorData();
-  }, [auth]);
   return (
-    <div className="mt-5 grid h-full w-full grid-cols-2 rounded-xl">
-      <form action={handleFormsData} className="flex flex-col gap-2">
+    <div className="mt-5 grid h-full w-full grid-cols-2">
+      <form action={handleFormsData} className="my-auto flex flex-col gap-1">
         <input
           type="text"
           name="title"
           placeholder="Titel"
           className="rounded-t-xl border-x-2 border-t-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
           onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+        />
+        <input
+          type="text"
+          name="author"
+          placeholder="Author"
+          className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
+          onChange={(e) =>
+            setFormData({
+              ...formData,
+              author: {
+                name: e.target.value.split(" ")[0] || "",
+                sirname: e.target.value.split(" ")[1] || "",
+              },
+            })
+          }
         />
         <input
           type="text"
@@ -75,13 +65,13 @@ export default function AdminForm({
         ></textarea>
         <button type="submit">Submit</button>
       </form>
-      <div className="h-full w-full border-l-2 border-black">
-        <h1 className="mt-2 text-2xl font-bold lg:text-3xl">
-          {formData.title}
-        </h1>
+      <div className="mx-auto flex w-full max-w-[500px] flex-col items-center">
+        <h1 className="text-2xl font-bold lg:text-3xl">{formData.title}</h1>
         <h2 className="text-sm">
-          {authorData.name + " " + authorData.sirname}
+          {formData.author.name + " " + formData.author.sirname}
         </h2>
+        <h4 className="text-sm">{formData.date}</h4>
+        <p>{formData.description}</p>
         <Image
           src="/alles_fuer_alle_banner.png"
           width={800}
