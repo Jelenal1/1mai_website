@@ -12,7 +12,7 @@ export type author = {
   sirname: string;
   name: string;
   role: string;
-  uuid: string;
+  uid: string;
 };
 
 export type article = {

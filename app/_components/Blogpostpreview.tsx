@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { article, articlewithauthor } from "../blog/page";
+import { articlewithauthor } from "../blog/page";
 
 export default function Blogpostpreview({
   article,
