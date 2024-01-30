@@ -68,7 +68,6 @@ export default function AdminForm({
                 if (imageSrc) {
                   // Set the image source to display
                   setFormData({ ...formData, image: imageSrc });
-                  console.log(imageSrc);
                 }
               };
               reader.readAsDataURL(file);
@@ -99,7 +98,7 @@ export default function AdminForm({
           src={formData.image}
           width={400}
           height={400}
-          alt="alles-fuer-alle"
+          alt={formData.title}
           className="my-2"
         />
         {formData.content.split("\\n" || "\n").map((paragraph, index) => (
