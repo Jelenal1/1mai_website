@@ -111,6 +111,12 @@ export default function page() {
           allowFullScreen
         ></iframe>
       </div>
+      <Image
+        src={"/1mai_testimonials/120501_1mai_Testimonials_084.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
     </main>
   );
 }
