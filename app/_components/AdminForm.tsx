@@ -12,6 +12,7 @@ export default function AdminForm({
     title: "",
     description: "",
     content: "",
+    image: "",
     date: new Date().toLocaleDateString("de-DE"),
     author: {
       name: "",
@@ -52,6 +53,28 @@ export default function AdminForm({
             setFormData({ ...formData, description: e.target.value })
           }
         />
+        <input
+          type="file"
+          accept="image/*"
+          name="image"
+          placeholder="Bild"
+          className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            if (file) {
+              const reader = new FileReader();
+              reader.onload = (event) => {
+                const imageSrc = event.target?.result as string;
+                if (imageSrc) {
+                  // Set the image source to display
+                  setFormData({ ...formData, image: imageSrc });
+                  console.log(imageSrc);
+                }
+              };
+              reader.readAsDataURL(file);
+            }
+          }}
+        />
         <textarea
           name="content"
           cols={30}
@@ -73,9 +96,9 @@ export default function AdminForm({
         <h4 className="text-sm">{formData.date}</h4>
         <p>{formData.description}</p>
         <Image
-          src="/alles_fuer_alle_banner.png"
-          width={800}
-          height={800}
+          src={formData.image}
+          width={400}
+          height={400}
           alt="alles-fuer-alle"
           className="my-2"
         />
