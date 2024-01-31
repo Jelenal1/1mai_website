@@ -32,8 +32,8 @@ export default async function page({ params }: { params: { id: string } }) {
             className="my-2"
           />
         )}
-        {articleData.content.split("\\n" || "\n").map((paragraph, index) => (
-          <p key={index} className="my-2">
+        {articleData.content.split("\n").map((paragraph, index) => (
+          <p key={index} className="my-2 w-full">
             {paragraph}
           </p>
         ))}
