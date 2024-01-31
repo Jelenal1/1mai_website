@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { article } from "../blog/page";
 import { useState } from "react";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "./firebase";
 
 export default function AdminBlogEdit({
   articleData,
@@ -15,13 +17,36 @@ export default function AdminBlogEdit({
   const [content, setContent] = useState(articleData.content);
   const [author, setAuthor] = useState(articleData.author);
   const rows = content.split("\n").length;
+
+  const updateArticle = async (updatedArticle: article) => {
+    const docRef = doc(db, "articles", updatedArticle.id);
+    await updateDoc(docRef, {
+      title: updatedArticle.title,
+      description: updatedArticle.description,
+      content: updatedArticle.content,
+      date: updatedArticle.date,
+      author: updatedArticle.author,
+    });
+  };
+
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
       <div className="relative flex max-w-[800px] flex-col items-center">
         {onEdit ? (
           <button
             className="absolute -right-2.5 top-5 text-4xl"
-            onClick={() => setOnEdit(false)}
+            onClick={async () => {
+              setOnEdit(false);
+              await updateArticle({
+                id: articleData.id,
+                title,
+                description,
+                content,
+                date: new Date().toLocaleDateString(),
+                author,
+                imageurl: articleData.imageurl,
+              });
+            }}
           >
             ✅
           </button>
@@ -41,10 +66,10 @@ export default function AdminBlogEdit({
             setTitle(e.currentTarget.innerText);
           }}
         >
-          {title}
+          {articleData.title}
         </h1>
         <h2
-          className="text-sm focus-within:outline-none"
+          className="text-sm font-bold focus-within:outline-none"
           contentEditable={onEdit}
           suppressContentEditableWarning
           onInput={(e) => {
@@ -53,16 +78,17 @@ export default function AdminBlogEdit({
         >
           {articleData.author}
         </h2>
-        <h3
-          className="text-sm focus-within:outline-none"
+        <h4 className="text-sm">{articleData.date}</h4>
+        <p
           contentEditable={onEdit}
           suppressContentEditableWarning
           onInput={(e) => {
             setDescription(e.currentTarget.innerText);
           }}
+          className="focus-within:outline-none"
         >
-          {description}
-        </h3>
+          {articleData.description}
+        </p>
         {articleData.imageurl ? (
           <img
             src={articleData.imageurl}
