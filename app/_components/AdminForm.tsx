@@ -1,27 +1,49 @@
 "use client";
 
+import { addDoc, collection } from "firebase/firestore";
+import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import Image from "next/image";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
+import { db } from "./firebase";
 
-export default function AdminForm({
-  handleFormsData,
-}: {
-  handleFormsData: (data: FormData) => void;
-}) {
+export default function AdminForm() {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
     content: "",
-    image: "",
+    imageSrc: "",
     date: new Date().toLocaleDateString("de-DE"),
-    author: {
-      name: "",
-      sirname: "",
-    },
+    author: "",
   });
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    const storage = getStorage();
+    const file = e.target.image.files[0];
+    console.log(file);
+    const storageRef = ref(storage, `images/${file.name}`);
+    await uploadBytes(storageRef, file);
+    const imageUrl = await getDownloadURL(storageRef);
+    const { title, description, content, author, date } = formData;
+    if (!title || !description || !content || !author) {
+      alert("Bitte alle Felder ausfüllen");
+      return;
+    }
+    const docRef = await addDoc(collection(db, "articles"), {
+      title: title,
+      description: description,
+      content: content,
+      date: date,
+      author: author,
+      imageurl: imageUrl ? imageUrl : "",
+    });
+    console.log("Document written with ID: ", docRef.id);
+    return;
+  };
+
   return (
     <div className="mt-5 grid h-full w-full grid-cols-2">
-      <form action={handleFormsData} className="my-auto flex flex-col gap-1">
+      <form onSubmit={handleSubmit} className="my-auto flex flex-col gap-1">
         <input
           type="text"
           name="title"
@@ -37,10 +59,7 @@ export default function AdminForm({
           onChange={(e) =>
             setFormData({
               ...formData,
-              author: {
-                name: e.target.value.split(" ")[0] || "",
-                sirname: e.target.value.split(" ")[1] || "",
-              },
+              author: e.target.value,
             })
           }
         />
@@ -61,13 +80,14 @@ export default function AdminForm({
           className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
           onChange={(e) => {
             const file = e.target.files?.[0];
+            console.log(file);
             if (file) {
               const reader = new FileReader();
               reader.onload = (event) => {
                 const imageSrc = event.target?.result as string;
                 if (imageSrc) {
                   // Set the image source to display
-                  setFormData({ ...formData, image: imageSrc });
+                  setFormData({ ...formData, imageSrc: imageSrc });
                 }
               };
               reader.readAsDataURL(file);
@@ -79,7 +99,6 @@ export default function AdminForm({
           cols={30}
           placeholder="content"
           rows={10}
-          {...handleFormsData}
           className="rounded-b-xl border-x-2 border-b-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
           onChange={(e) =>
             setFormData({ ...formData, content: e.target.value })
@@ -89,18 +108,20 @@ export default function AdminForm({
       </form>
       <div className="mx-auto flex w-full max-w-[500px] flex-col items-center">
         <h1 className="text-2xl font-bold lg:text-3xl">{formData.title}</h1>
-        <h2 className="text-sm">
-          {formData.author.name + " " + formData.author.sirname}
-        </h2>
+        <h2 className="text-sm">{formData.author}</h2>
         <h4 className="text-sm">{formData.date}</h4>
         <p>{formData.description}</p>
-        <Image
-          src={formData.image}
-          width={400}
-          height={400}
-          alt={formData.title}
-          className="my-2"
-        />
+        {formData.imageSrc ? (
+          <Image
+            src={formData.imageSrc}
+            width={400}
+            height={400}
+            alt={formData.title}
+            className="my-2"
+          />
+        ) : (
+          <img src="/alles_fuer_alle_banner.png" alt="" className="my-2" />
+        )}
         {formData.content.split("\\n" || "\n").map((paragraph, index) => (
           <p key={index} className="my-2">
             {paragraph}

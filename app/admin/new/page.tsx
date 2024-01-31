@@ -1,6 +1,8 @@
 import AdminForm from "@/app/_components/AdminForm";
-import { auth } from "@/app/_components/firebase";
+import { auth, db } from "@/app/_components/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { addDoc, collection } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { redirect } from "next/navigation";
 
 export default function page() {
@@ -9,13 +11,9 @@ export default function page() {
       redirect("/admin/login");
     }
   });
-  async function handleFormsData(data: FormData) {
-    "use server";
-    console.log(data);
-  }
   return (
     <main className="mx-2 mb-10">
-      <AdminForm handleFormsData={handleFormsData} />
+      <AdminForm />
     </main>
   );
 }
