@@ -38,78 +38,85 @@ export default function AdminForm() {
       imageurl: imageUrl ? imageUrl : "",
     });
     console.log("Document written with ID: ", docRef.id);
-    return;
+    window.location.href = "/admin";
   };
 
   return (
     <div className="mt-5 grid h-full w-full grid-cols-2">
-      <form onSubmit={handleSubmit} className="my-auto flex flex-col gap-1">
-        <input
-          type="text"
-          name="title"
-          placeholder="Titel"
-          className="rounded-t-xl border-x-2 border-t-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
-          onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-        />
-        <input
-          type="text"
-          name="author"
-          placeholder="Author"
-          className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              author: e.target.value,
-            })
-          }
-        />
-        <input
-          type="text"
-          name="description"
-          placeholder="Beschreibung"
-          className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
-          onChange={(e) =>
-            setFormData({ ...formData, description: e.target.value })
-          }
-        />
-        <input
-          type="file"
-          accept="image/*"
-          name="image"
-          placeholder="Bild"
-          className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
-          onChange={(e) => {
-            const file = e.target.files?.[0];
-            console.log(file);
-            if (file) {
-              const reader = new FileReader();
-              reader.onload = (event) => {
-                const imageSrc = event.target?.result as string;
-                if (imageSrc) {
-                  // Set the image source to display
-                  setFormData({ ...formData, imageSrc: imageSrc });
-                }
-              };
-              reader.readAsDataURL(file);
+      <div className="relative">
+        <form
+          onSubmit={handleSubmit}
+          className="absolute left-5 top-10 my-auto flex w-full flex-col gap-1"
+        >
+          <input
+            type="text"
+            name="title"
+            placeholder="Titel"
+            className="rounded-t-xl border-x-2 border-t-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
+            onChange={(e) =>
+              setFormData({ ...formData, title: e.target.value })
             }
-          }}
-        />
-        <textarea
-          name="content"
-          cols={30}
-          placeholder="content"
-          rows={10}
-          className="rounded-b-xl border-x-2 border-b-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
-          onChange={(e) =>
-            setFormData({ ...formData, content: e.target.value })
-          }
-          onInput={(e) => {
-            e.target.style.height = "auto";
-            e.target.style.height = `${e.target.scrollHeight}px`;
-          }}
-        ></textarea>
-        <button type="submit">Submit</button>
-      </form>
+          />
+          <input
+            type="text"
+            name="author"
+            placeholder="Author"
+            className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
+            onChange={(e) =>
+              setFormData({
+                ...formData,
+                author: e.target.value,
+              })
+            }
+          />
+          <input
+            type="text"
+            name="description"
+            placeholder="Beschreibung"
+            className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
+            onChange={(e) =>
+              setFormData({ ...formData, description: e.target.value })
+            }
+          />
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            placeholder="Bild"
+            className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              console.log(file);
+              if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                  const imageSrc = event.target?.result as string;
+                  if (imageSrc) {
+                    // Set the image source to display
+                    setFormData({ ...formData, imageSrc: imageSrc });
+                  }
+                };
+                reader.readAsDataURL(file);
+              }
+            }}
+          />
+          <textarea
+            name="content"
+            cols={30}
+            placeholder="content"
+            rows={10}
+            className="rounded-b-xl border-x-2 border-b-2 border-black bg-transparent pl-2 text-lg outline-none focus-within:bg-slate-300"
+            onChange={(e) =>
+              setFormData({ ...formData, content: e.target.value })
+            }
+            onInput={(e) => {
+              e.target.style.height = "auto";
+              e.target.style.height = `${e.target.scrollHeight}px`;
+            }}
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
       <div className="mx-auto flex w-full max-w-[500px] flex-col items-center">
         <h1 className="text-2xl font-bold lg:text-3xl">{formData.title}</h1>
         <h2 className="text-sm">{formData.author}</h2>
