@@ -25,7 +25,7 @@ export default async function page() {
         content: doc.data().content,
         date: doc.data().date,
         author: doc.data().author,
-        image: doc.data().image,
+        imageurl: doc.data().imageurl,
       });
     }
     return articles;

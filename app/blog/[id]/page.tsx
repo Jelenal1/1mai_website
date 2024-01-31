@@ -17,13 +17,21 @@ export default async function page({ params }: { params: { id: string } }) {
           {articleData.title}
         </h1>
         <h2 className="text-sm">{articleData.author}</h2>
-        <Image
-          src="/alles_fuer_alle_banner.png"
-          width={800}
-          height={800}
-          alt="alles-fuer-alle"
-          className="my-2"
-        />
+        {articleData.imageurl ? (
+          <img
+            src={articleData.imageurl}
+            alt={articleData.title}
+            className="my-2"
+          />
+        ) : (
+          <Image
+            src="/alles_fuer_alle_banner.png"
+            width={800}
+            height={800}
+            alt="alles-fuer-alle"
+            className="my-2"
+          />
+        )}
         {articleData.content.split("\\n" || "\n").map((paragraph, index) => (
           <p key={index} className="my-2">
             {paragraph}

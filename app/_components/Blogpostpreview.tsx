@@ -6,7 +6,11 @@ export default function Blogpostpreview({ article }: { article: article }) {
       <h2 className="text-xl">{article.title}</h2>
       <h3>{article.author}</h3>
       <h4 className="text-sm">{article.date}</h4>
-      <img src="//via.placeholder.com/300" alt="" />
+      {article.imageurl ? (
+        <img src={article.imageurl} alt="" />
+      ) : (
+        <img src="/alles_fuer_alle_banner.png" alt="" />
+      )}
       <p>{article.description}</p>
     </div>
   );

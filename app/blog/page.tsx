@@ -15,7 +15,7 @@ export type article = {
   content: string;
   date: string;
   author: string;
-  image: string;
+  imageurl: string;
 };
 
 export default async function Blog() {
@@ -30,7 +30,7 @@ export default async function Blog() {
         content: doc.data().content,
         date: doc.data().date,
         author: doc.data().author,
-        image: doc.data().image,
+        imageurl: doc.data().imageurl,
       });
     }
     return articles;
