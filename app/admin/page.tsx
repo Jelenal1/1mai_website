@@ -1,5 +1,5 @@
-import { collection, getDoc, getDocs } from "firebase/firestore";
-import { articlewithauthor, author } from "../blog/page";
+import { collection, getDocs } from "firebase/firestore";
+import { article } from "../blog/page";
 import { auth, db } from "../_components/firebase";
 import Link from "next/link";
 import Blogpostpreview from "../_components/Blogpostpreview";
@@ -16,17 +16,15 @@ export default async function page() {
   async function getArticles() {
     const querySnapshot = await getDocs(collection(db, "articles"));
 
-    const articles: articlewithauthor[] = [];
+    const articles: article[] = [];
     for (const doc of querySnapshot.docs) {
-      const authorPromise = await getDoc(doc.data().author);
-      const author = authorPromise.data() as author;
       articles.push({
         id: doc.id,
         title: doc.data().title,
         description: doc.data().description,
         content: doc.data().content,
         date: doc.data().date,
-        author: author,
+        author: doc.data().author,
       });
     }
     return articles;
@@ -43,7 +41,7 @@ export default async function page() {
         >
           <CiCirclePlus className="mr-1 mt-1 text-3xl" /> Artikel hinzufügen
         </Link>
-        {articles.map((article: articlewithauthor) => (
+        {articles.map((article: article) => (
           <Link href={`/admin/${article.id.toString()}`} className="relative">
             <Blogpostpreview article={article} />
             <span className="absolute right-0 top-0 text-3xl">📝</span>
