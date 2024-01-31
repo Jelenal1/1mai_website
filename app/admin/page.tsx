@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import { article } from "../blog/page";
 import { auth, db } from "../_components/firebase";
 import Link from "next/link";
@@ -6,6 +6,7 @@ import Blogpostpreview from "../_components/Blogpostpreview";
 import { CiCirclePlus } from "react-icons/ci";
 import { redirect } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
+import DeleteButton from "../_components/DeleteButton";
 
 export default async function page() {
   onAuthStateChanged(auth, (user) => {
@@ -43,10 +44,16 @@ export default async function page() {
           <CiCirclePlus className="mr-1 mt-1 text-3xl" /> Artikel hinzufügen
         </Link>
         {articles.map((article: article) => (
-          <Link href={`/admin/${article.id.toString()}`} className="relative">
-            <Blogpostpreview article={article} />
+          <div className="relative">
+            <Link href={`/admin/${article.id.toString()}`}>
+              <Blogpostpreview article={article} />
+            </Link>
             <span className="absolute right-0 top-0 text-3xl">📝</span>
-          </Link>
+            <DeleteButton
+              id={article.id.toString()}
+              className="absolute left-0 top-0 text-3xl"
+            />
+          </div>
         ))}
       </div>
     </main>

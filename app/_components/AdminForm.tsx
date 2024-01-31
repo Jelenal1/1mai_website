@@ -18,17 +18,17 @@ export default function AdminForm() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    const { title, description, content, author, date } = formData;
+    if (title === "" || description === "" || content === "" || author === "") {
+      return alert("Bitte alle Felder ausfüllen");
+    }
     const storage = getStorage();
     const file = e.target.image.files[0];
     console.log(file);
     const storageRef = ref(storage, `images/${file.name}`);
     await uploadBytes(storageRef, file);
     const imageUrl = await getDownloadURL(storageRef);
-    const { title, description, content, author, date } = formData;
-    if (!title || !description || !content || !author) {
-      alert("Bitte alle Felder ausfüllen");
-      return;
-    }
+
     const docRef = await addDoc(collection(db, "articles"), {
       title: title,
       description: description,
@@ -103,6 +103,10 @@ export default function AdminForm() {
           onChange={(e) =>
             setFormData({ ...formData, content: e.target.value })
           }
+          onInput={(e) => {
+            e.target.style.height = "auto";
+            e.target.style.height = `${e.target.scrollHeight}px`;
+          }}
         ></textarea>
         <button type="submit">Submit</button>
       </form>
@@ -122,7 +126,7 @@ export default function AdminForm() {
         ) : (
           <img src="/alles_fuer_alle_banner.png" alt="" className="my-2" />
         )}
-        {formData.content.split("\\n" || "\n").map((paragraph, index) => (
+        {formData.content.split("\n").map((paragraph, index) => (
           <p key={index} className="my-2">
             {paragraph}
           </p>
