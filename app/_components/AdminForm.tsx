@@ -109,9 +109,12 @@ export default function AdminForm() {
             onChange={(e) =>
               setFormData({ ...formData, content: e.target.value })
             }
-            onInput={(e) => {
-              e.target.style.height = "auto";
-              e.target.style.height = `${e.target.scrollHeight}px`;
+            onInput={(e: React.FormEvent<HTMLTextAreaElement>) => {
+              const target = e.currentTarget as HTMLTextAreaElement;
+              if (target) {
+                target.style.height = "auto";
+                target.style.height = `${target.scrollHeight}px`;
+              }
             }}
           ></textarea>
           <button type="submit">Submit</button>
