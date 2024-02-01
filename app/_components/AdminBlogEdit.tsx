@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { article } from "../blog/page";
 import { useState } from "react";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "./firebase";
 
 export default function AdminBlogEdit({
   articleData,
@@ -15,13 +17,32 @@ export default function AdminBlogEdit({
   const [content, setContent] = useState(articleData.content);
   const [author, setAuthor] = useState(articleData.author);
   const rows = content.split("\n").length;
+
+  async function handleSubmit() {
+    console.log(db);
+    const docRef = doc(db, "articles", `${articleData.id}`);
+    try {
+      await updateDoc(docRef, {
+        title: title,
+        description: description,
+        content: content,
+        author: author,
+      });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  }
+
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
       <div className="relative flex max-w-[800px] flex-col items-center">
         {onEdit ? (
           <button
             className="absolute -right-2.5 top-5 text-4xl"
-            onClick={() => setOnEdit(false)}
+            onClick={() => {
+              setOnEdit(false);
+              handleSubmit();
+            }}
           >
             ✅
           </button>
@@ -30,7 +51,7 @@ export default function AdminBlogEdit({
             className="absolute -right-2.5 top-5 text-4xl"
             onClick={() => setOnEdit(true)}
           >
-            ✏️
+            ✏️Editieren
           </button>
         )}
         <h1
@@ -41,7 +62,7 @@ export default function AdminBlogEdit({
             setTitle(e.currentTarget.innerText);
           }}
         >
-          {title}
+          {articleData.title}
         </h1>
         <h2
           className="text-sm focus-within:outline-none"
@@ -61,7 +82,7 @@ export default function AdminBlogEdit({
             setDescription(e.currentTarget.innerText);
           }}
         >
-          {description}
+          {articleData.description}
         </h3>
         {articleData.imageurl ? (
           <img
