@@ -117,6 +117,149 @@ export default function page() {
         height={1000}
         alt="1 Mai Testimonial"
       />
+      <Image
+        src={"/1mai_testimonials/120501_1mai_Testimonials_082.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Image
+        src={"/1mai_testimonials/120501_1mai_Testimonials_08.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_08.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_082.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_083.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Link
+        href={"/archive/2020/das-sagen-wir-zum-1mai/fluechtlingssolidaritaet"}
+      >
+        <Image
+          src={"/1mai_testimonials/aid-hoc-logo.png"}
+          alt="1 Mai Testimonial"
+          width={400}
+          height={400}
+          className="my-2"
+        />
+      </Link>
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_063.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_062.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_064.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_054.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_055.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_057.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_058.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_042.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_043.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_046.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_047.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_048.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0410.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0411-1.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_05_Bopp_korr.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_05_keller.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_05_Stampfli.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
     </main>
   );
 }
