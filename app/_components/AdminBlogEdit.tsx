@@ -89,7 +89,7 @@ export default function AdminBlogEdit({
           className="focus-within:outline-none"
         >
           {articleData.description}
-        </h3>
+        </p>
         {articleData.imageurl ? (
           <img
             src={articleData.imageurl}
