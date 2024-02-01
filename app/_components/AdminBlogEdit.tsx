@@ -5,6 +5,8 @@ import { article } from "../blog/page";
 import { useState } from "react";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "./firebase";
+import Link from "next/link";
+import { IoMdArrowBack } from "react-icons/io";
 
 export default function AdminBlogEdit({
   articleData,
@@ -36,6 +38,9 @@ export default function AdminBlogEdit({
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
       <div className="relative flex max-w-[800px] flex-col items-center">
+        <Link href={"/admin"} className="absolute -left-2 top-5 text-5xl">
+          <IoMdArrowBack />
+        </Link>
         {onEdit ? (
           <button
             className="absolute -right-2.5 top-5 text-4xl"
