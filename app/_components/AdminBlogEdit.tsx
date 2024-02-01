@@ -5,6 +5,8 @@ import { article } from "../blog/page";
 import { useState } from "react";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "./firebase";
+import Link from "next/link";
+import { IoMdArrowBack } from "react-icons/io";
 
 export default function AdminBlogEdit({
   articleData,
@@ -18,34 +20,33 @@ export default function AdminBlogEdit({
   const [author, setAuthor] = useState(articleData.author);
   const rows = content.split("\n").length;
 
-  const updateArticle = async (updatedArticle: article) => {
-    const docRef = doc(db, "articles", updatedArticle.id);
-    await updateDoc(docRef, {
-      title: updatedArticle.title,
-      description: updatedArticle.description,
-      content: updatedArticle.content,
-      date: updatedArticle.date,
-      author: updatedArticle.author,
-    });
-  };
+  async function handleSubmit() {
+    console.log(db);
+    const docRef = doc(db, "articles", `${articleData.id}`);
+    try {
+      await updateDoc(docRef, {
+        title: title,
+        description: description,
+        content: content,
+        author: author,
+      });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  }
 
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
       <div className="relative flex max-w-[800px] flex-col items-center">
+        <Link href={"/admin"} className="absolute -left-2 top-5 text-5xl">
+          <IoMdArrowBack />
+        </Link>
         {onEdit ? (
           <button
             className="absolute -right-2.5 top-5 text-4xl"
-            onClick={async () => {
+            onClick={() => {
               setOnEdit(false);
-              await updateArticle({
-                id: articleData.id,
-                title,
-                description,
-                content,
-                date: new Date().toLocaleDateString(),
-                author,
-                imageurl: articleData.imageurl,
-              });
+              handleSubmit();
             }}
           >
             ✅
@@ -55,7 +56,7 @@ export default function AdminBlogEdit({
             className="absolute -right-2.5 top-5 text-4xl"
             onClick={() => setOnEdit(true)}
           >
-            ✏️
+            ✏️Editieren
           </button>
         )}
         <h1
@@ -88,7 +89,7 @@ export default function AdminBlogEdit({
           className="focus-within:outline-none"
         >
           {articleData.description}
-        </p>
+        </h3>
         {articleData.imageurl ? (
           <img
             src={articleData.imageurl}
