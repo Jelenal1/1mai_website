@@ -48,7 +48,7 @@ export default function page() {
           <p>
             Sie sind schon mit dabei:{" "}
             <Link
-              href="/wir-sind-dabei"
+              href="/archive/2020/wir-sind-dabei"
               className="text-blue-600 underline hover:text-purple-600"
             >
               Zu den Unterzeichnenden
