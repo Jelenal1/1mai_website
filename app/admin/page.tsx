@@ -10,9 +10,6 @@ import DeleteButton from "../_components/DeleteButton";
 import LogoutButton from "../_components/LogoutButton";
 
 export default async function page() {
-  if (!auth.currentUser) {
-    redirect("/admin/login");
-  }
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       redirect("/admin/login");
