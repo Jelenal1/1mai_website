@@ -117,6 +117,335 @@ export default function page() {
         height={1000}
         alt="1 Mai Testimonial"
       />
+      <Image
+        src={"/1mai_testimonials/120501_1mai_Testimonials_082.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Image
+        src={"/1mai_testimonials/120501_1mai_Testimonials_08.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_08.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_082.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_083.png"}
+        alt="1 Mai Testimonial"
+        width={800}
+        height={1000}
+      />
+      <Link
+        href={"/archive/2020/das-sagen-wir-zum-1mai/fluechtlingssolidaritaet"}
+      >
+        <Image
+          src={"/1mai_testimonials/aid-hoc-logo.png"}
+          alt="1 Mai Testimonial"
+          width={400}
+          height={400}
+          className="my-2"
+        />
+      </Link>
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_063.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_062.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_064.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_054.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_055.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_057.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_058.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_042.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_043.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_046.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_047.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_048.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0410.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0411-1.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_05_Bopp_korr.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_05_keller.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_05_Stampfli.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_049.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0413.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0414.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Siegmann_def18.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0417.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_045.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_04.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0412.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0415.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120427_1mai_Testi_Serie_053.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120426_1mai_Testimonials_Serie_0419.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_casutt_sarah.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_fink_juna.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_erismann.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Johansson.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Wenger_02.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_019.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_017.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_01.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />{" "}
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_015.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />{" "}
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_012.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />{" "}
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_016.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />{" "}
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_0111.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />{" "}
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_013.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />{" "}
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_0112.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />{" "}
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_0110.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_018.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120418_1mai_Testi_Neukom_korr.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/120430_1mai_Testimonials_06.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_0114.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
+      <Image
+        src={"/1mai_testimonials/1204119_mai_Testi_Serie_0116.png"}
+        width={800}
+        height={1000}
+        alt="1 Mai Testimonial"
+      />
     </main>
   );
 }

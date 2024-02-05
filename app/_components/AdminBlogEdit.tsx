@@ -70,7 +70,7 @@ export default function AdminBlogEdit({
           {articleData.title}
         </h1>
         <h2
-          className="text-sm focus-within:outline-none"
+          className="text-sm font-bold focus-within:outline-none"
           contentEditable={onEdit}
           suppressContentEditableWarning
           onInput={(e) => {
@@ -79,16 +79,17 @@ export default function AdminBlogEdit({
         >
           {articleData.author}
         </h2>
-        <h3
-          className="text-sm focus-within:outline-none"
+        <h4 className="text-sm">{articleData.date}</h4>
+        <p
           contentEditable={onEdit}
           suppressContentEditableWarning
           onInput={(e) => {
             setDescription(e.currentTarget.innerText);
           }}
+          className="focus-within:outline-none"
         >
           {articleData.description}
-        </h3>
+        </p>
         {articleData.imageurl ? (
           <img
             src={articleData.imageurl}

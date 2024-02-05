@@ -14,6 +14,7 @@ export default async function page({ params }: { params: { id: string } }) {
   const id = params.id;
   const docRef = doc(db, "articles", id);
   const docSnap = await getDoc(docRef);
+
   const articleData = {
     id: docSnap.id,
     ...docSnap.data(),

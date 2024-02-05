@@ -31,6 +31,12 @@ export default function Sidenav({
         <Link href={"/"} className="mx-auto mt-5 text-xl">
           Home
         </Link>
+        <Link href={"/blog"} className="mx-auto mt-5 text-xl">
+          Blog
+        </Link>
+        <Link href={"/ueber-uns"} className="mx-auto mt-5 text-xl">
+          Über uns
+        </Link>
         <Link href={"/mitmachen"} className="mx-auto mt-5 text-xl">
           Mitmachen
         </Link>
@@ -38,7 +44,9 @@ export default function Sidenav({
           Spenden
         </Link>
         <button
-          onClick={() => setOpenArchiv(!openArchiv)}
+          onClick={() => {
+            setOpenArchiv(!openArchiv);
+          }}
           className="mx-auto mt-5 text-xl"
         >
           Archiv

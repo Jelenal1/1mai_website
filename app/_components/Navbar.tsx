@@ -25,9 +25,10 @@ export default function Navbar() {
         <Sidenav open={open} setOpen={setOpen} />
         <div className="ml-20 hidden gap-10 text-xl lg:flex">
           <Link href={"/"}>Home</Link>
+          <Link href={"/blog"}>Blog</Link>
+          <Link href={"/ueber-uns"}>Über uns</Link>
           <Link href={"/mitmachen"}>Mitmachen</Link>
           <Link href={"/spenden"}>Spenden</Link>
-          <Link href={"/ueber-uns"}>Über uns</Link>
           <button onClick={() => setOpenArchiv(!openArchiv)}>Archiv</button>
         </div>
       </div>
