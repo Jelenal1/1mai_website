@@ -14,6 +14,7 @@ export default function page() {
     const password = data.get("password")?.toString();
     if (!email || !password) return;
     await signInWithEmailAndPassword(auth, email, password);
+    redirect("/admin");
   }
 
   return (

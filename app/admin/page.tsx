@@ -7,8 +7,12 @@ import { CiCirclePlus } from "react-icons/ci";
 import { redirect } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import DeleteButton from "../_components/DeleteButton";
+import LogoutButton from "../_components/LogoutButton";
 
 export default async function page() {
+  if (!auth.currentUser) {
+    redirect("/admin/login");
+  }
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       redirect("/admin/login");
@@ -36,6 +40,7 @@ export default async function page() {
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
       <div className="flex w-full max-w-[800px] flex-col items-center">
+        <LogoutButton />
         <h1 className="my-2 text-2xl font-bold lg:text-3xl">Artikel</h1>
         <Link
           href="/admin/new"
