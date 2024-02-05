@@ -10,11 +10,9 @@ import DeleteButton from "../_components/DeleteButton";
 import LogoutButton from "../_components/LogoutButton";
 
 export default async function page() {
-  onAuthStateChanged(auth, (user) => {
-    if (!user) {
-      redirect("/admin/login");
-    }
-  });
+  if (!auth.currentUser) {
+    redirect("/admin/login");
+  }
   async function getArticles() {
     const querySnapshot = await getDocs(collection(db, "articles"));
 
