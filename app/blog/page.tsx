@@ -39,7 +39,7 @@ export default async function Blog() {
   const articles = await getArticles();
 
   return (
-    <main className="mx-9 mb-10 flex flex-col items-center">
+    <main className="mx-9 mb-10 flex min-h-screen flex-col items-center">
       <h2 className="mb-3 text-xl font-bold lg:text-2xl">Blog</h2>
       {articles.map((article: article) => (
         <Link key={article.id} href={`/blog/${article.id.toString()}`}>
