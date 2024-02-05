@@ -25,6 +25,19 @@ export default function AdminForm() {
     const storage = getStorage();
     const file = e.target.image.files[0];
     console.log(file);
+    if (!file) {
+      const docRef = await addDoc(collection(db, "articles"), {
+        title: title,
+        description: description,
+        content: content,
+        date: date,
+        author: author,
+        imageurl: "",
+      });
+      console.log("Document written with ID: ", docRef.id);
+      window.location.href = "/admin";
+      return;
+    }
     const storageRef = ref(storage, `images/${file.name}`);
     await uploadBytes(storageRef, file);
     const imageUrl = await getDownloadURL(storageRef);
@@ -35,7 +48,7 @@ export default function AdminForm() {
       content: content,
       date: date,
       author: author,
-      imageurl: imageUrl ? imageUrl : "",
+      imageurl: imageUrl,
     });
     console.log("Document written with ID: ", docRef.id);
     window.location.href = "/admin";
