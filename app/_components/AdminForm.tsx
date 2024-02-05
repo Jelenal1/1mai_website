@@ -3,8 +3,9 @@
 import { addDoc, collection } from "firebase/firestore";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import Image from "next/image";
-import { FormEvent, useState } from "react";
-import { db } from "./firebase";
+import { useState } from "react";
+import { auth, db } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function AdminForm() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,12 @@ export default function AdminForm() {
     date: new Date().toLocaleDateString("de-DE"),
     author: "",
   });
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "/admin/login";
+    }
+  })
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
