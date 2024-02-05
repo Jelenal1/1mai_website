@@ -1,4 +1,4 @@
-import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { article } from "../blog/page";
 import { auth, db } from "../_components/firebase";
 import Link from "next/link";
@@ -10,9 +10,11 @@ import DeleteButton from "../_components/DeleteButton";
 import LogoutButton from "../_components/LogoutButton";
 
 export default async function page() {
-  if (!auth.currentUser) {
-    redirect("/admin/login");
-  }
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      redirect("/admin/login");
+    }
+  })
   async function getArticles() {
     const querySnapshot = await getDocs(collection(db, "articles"));
 

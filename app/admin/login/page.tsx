@@ -1,21 +1,25 @@
+"use client";
 import { auth } from "@/app/_components/firebase";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function page() {
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      redirect("/admin");
-    }
-  });
+  const router = useRouter();
   async function handleLogin(data: FormData) {
-    "use server";
     const email = data.get("email")?.toString();
     const password = data.get("password")?.toString();
     if (!email || !password) return;
     await signInWithEmailAndPassword(auth, email, password);
-    redirect("/admin");
   }
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        router.push("/admin");
+      }
+    });
+  }, [auth]);
 
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
