@@ -12,7 +12,7 @@ export default function DeleteButton({
   const handleDelete = async (id: string) => {
     const docRef = doc(db, "articles", id);
     await deleteDoc(docRef);
-    return;
+    window.location.reload();
   };
 
   return (

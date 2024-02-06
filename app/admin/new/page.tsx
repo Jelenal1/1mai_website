@@ -14,7 +14,7 @@ export default function page() {
     });
   }, [auth]);
   return (
-    <main className="mx-2 mb-10">
+    <main className="mx-2 mb-10 min-h-screen">
       <AdminForm />
     </main>
   );

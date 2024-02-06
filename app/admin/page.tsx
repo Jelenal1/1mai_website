@@ -9,12 +9,16 @@ import { onAuthStateChanged } from "firebase/auth";
 import DeleteButton from "../_components/DeleteButton";
 import LogoutButton from "../_components/LogoutButton";
 
-export default async function page() {
+async function checkAuth() {
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       redirect("/admin/login");
     }
-  })
+  });
+}
+
+export default async function page() {
+  await checkAuth();
   async function getArticles() {
     const querySnapshot = await getDocs(collection(db, "articles"));
 

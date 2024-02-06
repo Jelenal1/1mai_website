@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import { article } from "../blog/page";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { doc, updateDoc } from "firebase/firestore";
-import { db } from "./firebase";
+import { auth, db } from "./firebase";
 import Link from "next/link";
 import { IoMdArrowBack } from "react-icons/io";
+import { onAuthStateChanged } from "firebase/auth";
+import { redirect } from "next/navigation";
 
 export default function AdminBlogEdit({
   articleData,
@@ -34,6 +36,12 @@ export default function AdminBlogEdit({
       console.error("Error adding document: ", e);
     }
   }
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "/admin/login";
+    }
+  });
 
   return (
     <main className="mx-9 mb-10 flex flex-col items-center">
