@@ -28,14 +28,13 @@ export default function Navbar() {
           <Link href={"/blog"}>Blog</Link>
           <Link href={"/ueber-uns"}>Über uns</Link>
           <Link href={"/mitmachen"}>Mitmachen</Link>
-          <Link href={"/spenden"}>Spenden</Link>
           <button onClick={() => setOpenArchiv(!openArchiv)}>Archiv</button>
         </div>
       </div>
       <div
         className={
           openArchiv
-            ? "ml-[738px] hidden w-fit gap-2 border-t border-black transition-all lg:flex"
+            ? "ml-[700px] hidden w-fit gap-2 border-t border-black transition-all lg:flex"
             : "invisible flex w-fit gap-2 transition-all"
         }
       >
