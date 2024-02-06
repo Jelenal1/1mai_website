@@ -15,7 +15,7 @@ export default function Sidenav({
     <div
       className={
         open
-          ? "fixed right-0 top-0 h-screen w-screen items-center bg-opacity-60 backdrop-blur transition-all ease-in"
+          ? "fixed right-0 top-0 h-screen w-screen items-center bg-amber-100 bg-opacity-80 opacity-100 backdrop-blur transition-all ease-in"
           : "invisible fixed right-0 top-0 h-screen w-screen items-center bg-opacity-60 opacity-0 backdrop-blur transition-all duration-200 ease-out"
       }
     >
