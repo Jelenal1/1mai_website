@@ -1,9 +1,15 @@
 "use client";
 
-import { signOut } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "./firebase";
 
 export default function LogoutButton() {
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "/admin/login";
+    }
+  });
+
   return (
     <button
       onClick={async () => {
