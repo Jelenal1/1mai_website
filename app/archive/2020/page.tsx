@@ -15,6 +15,12 @@ export default function page() {
           >
             Das sagen wir zum 1. Mai
           </Link>
+          <Link
+            href={"/archive/2020/wir-sind-dabei"}
+            className="text-blue-600 underline hover:text-purple-600"
+          >
+            Wir sind dabei
+          </Link>
         </div>
         <CarouselWrapper
           images={[
