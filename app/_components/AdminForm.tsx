@@ -21,7 +21,7 @@ export default function AdminForm() {
     if (!user) {
       window.location.href = "/admin/login";
     }
-  })
+  });
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -43,7 +43,6 @@ export default function AdminForm() {
       });
       console.log("Document written with ID: ", docRef.id);
       window.location.href = "/admin";
-      return;
     }
     const storageRef = ref(storage, `images/${file.name}`);
     await uploadBytes(storageRef, file);
