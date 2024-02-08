@@ -7,7 +7,7 @@ export default function page() {
         <h1 className="my-2 text-2xl font-bold lg:text-3xl">
           1 Mai Winterthur 2020
         </h1>
-        <div className="mb-2 w-full max-w-[250px] rounded-lg border border-black p-2 text-center lg:max-w-[300px]">
+        <div className="mb-2 flex w-full max-w-[250px] flex-col gap-2 rounded-lg border border-black p-2 text-center lg:max-w-[300px]">
           <h2 className="font-bold">Weitere Seiten von 2020</h2>
           <Link
             href={"/archive/2020/das-sagen-wir-zum-1mai"}
