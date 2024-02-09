@@ -43,6 +43,7 @@ export default function AdminForm() {
       });
       console.log("Document written with ID: ", docRef.id);
       window.location.href = "/admin";
+      return;
     }
     const storageRef = ref(storage, `images/${file.name}`);
     await uploadBytes(storageRef, file);
