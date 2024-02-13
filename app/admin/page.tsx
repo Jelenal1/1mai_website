@@ -1,24 +1,13 @@
 import { collection, getDocs } from "firebase/firestore";
 import { article } from "../blog/page";
-import { auth, db } from "../_components/firebase";
+import { db } from "../_components/firebase";
 import Link from "next/link";
 import Blogpostpreview from "../_components/Blogpostpreview";
 import { CiCirclePlus } from "react-icons/ci";
-import { redirect } from "next/navigation";
-import { onAuthStateChanged } from "firebase/auth";
 import DeleteButton from "../_components/DeleteButton";
 import LogoutButton from "../_components/LogoutButton";
 
-async function checkAuth() {
-  onAuthStateChanged(auth, (user) => {
-    if (!user) {
-      redirect("/admin/login");
-    }
-  });
-}
-
 export default async function page() {
-  await checkAuth();
   async function getArticles() {
     const querySnapshot = await getDocs(collection(db, "articles"));
 
