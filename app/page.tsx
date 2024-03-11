@@ -15,52 +15,71 @@ export default function Home() {
       />
       <h2 className="mt-3 text-xl font-bold lg:text-2xl">Programm</h2>
       <p className="w-full max-w-[800px] text-justify">
-        10.30 Uhr Steinberggasse für Demo anschliessend Reden, Musik und
+        12.30 Uhr Steinberggasse für Demo anschliessend Reden, Musik und
         Festwirtschaft auf dem Neumarkt
       </p>
       <h2 className="mt-3 text-xl font-bold lg:text-2xl">Reden</h2>
       <p className="w-full max-w-[800px] text-justify">
-        Eidgenössische Kommission dini Mueter Mandy Abou Shoak Gastrakollektiv
-        Saeed Farkhondeh
+        Rebecca Acquaro- N. (Feministisches Kollektiv)
+        <br /> VPOD, UNIA
+        <br /> Valeria Muster (JUSO)
+        <br /> Anna Rosenwasser (SP)
       </p>
       <h2 className="mt-3 text-xl font-bold lg:text-2xl">Musik</h2>
       <p className="w-full max-w-[800px] text-justify">
-        Olekanone, IroNina ReVulva <br /> und muRmure (RAP) <br /> Mezu (BALKAN)
+        15:00 Peter Pana <br />
+        16:00 Filterbank
       </p>
       <h2 className="mt-3 text-2xl font-bold lg:text-2xl">Alles für Alle</h2>
       <p className="w-full max-w-[800px] text-justify">
-        Die letzten Jahre haben gezeigt, dass Krieg und Krisen die Gesellschaft
-        spalten und Ungerechtigkeiten weiter verstärken. Immer mehr Menschen
-        können trotz Vollzeitjob kaum Miete und Krankenkasse zahlen. Betroffen
-        sind davon hauptsächlich Frauen, die wegen unbezahlter Sorgearbeit und
-        Arbeit in Tieflohnjobs stärker armutsgefährdet sind. Mit der Erhöhung
-        des Rentenalters hat sich diese Situation weiter verschlechtert.
+        Bezahlbarer Wohnraum ist ein Grundrecht. Im Sommer 2023 standen in
+        Winterthur gerade mal 112 Wohnungen frei. Die Mieten steigen, während
+        die Löhne der Teuerung nicht angepasst werden. Zusammen mit den
+        Nebenkosten und den Krankenkassenprämien wird die monatliche Miete zu
+        einer enormen Belastung. Steigende Mieten und tiefere Löhne erfordern
+        Verzicht, beispielsweise auf eine ausgewogene Ernährung oder
+        Gesundheitsleistungen. Dieser Verzicht wirkt sich direkt negativ auf die
+        körperliche und geistige Gesundheit aus und kann schlimmstenfalls in die
+        Armut führen. Währenddessen reissen Immobilienfirmen fleissig ab, bauen
+        und sanieren. Teure Wohnungen ersetzen die günstigen und bisherige
+        Bewohner*innen werden verdrängt.
       </p>
       <p className="mt-3 w-full max-w-[800px] text-justify">
-        In Europa tobt seit über einem Jahr ein brutaler Krieg, die daraus
-        entstehende Energiekrise soll mit neuen Gaskraftwerken und
-        individualisierenden Energiesparmassnahmen bekämpft werden. Da scheinen
-        Lösungen für die Klimakrise weit entfernt. Obendrauf investiert der Bund
-        Milliarden in die Rettung einer korrupten, klimazerstörerischen Bank.
-        Die Bevölkerung trägt dabei das ganze Risiko, die Banken die Profite.
+        Das darf nicht sein! Mit der Initiative “Wohnen für Alle” fordert die
+        SP, dass bis im Jahre 2040 mindestens ein Viertel aller Wohnungen in
+        Winterthur dem gewinnorientierten Wohnungsmarkt entzogen und
+        gemeinnützig verwaltet werden. Aktuell sind es nur 13%. Auf der anderen
+        Seite stehen Versicherungen, Banken und Pensionskassen, die über ein
+        Drittel der Mietwohnungen besitzen und damit massiv Profit auf unsere
+        Kosten erwirtschaften. Der Gegenvorschlag des Stadtrates sieht nur 30
+        zusätzliche gemeinnützige Wohnungen pro Jahr vor. Wir fordern ein klares
+        und ambitioniertes Ziel, um der Wohnungsnot aktiv entgegenzuwirken.
       </p>
       <p className="mt-3 w-full max-w-[800px] text-justify">
-        Wir fordern deswegen an diesem 1. Mai «Alles für alle»! Wir wollen faire
-        Löhne, bezahlbare Wohnungen, ein Gesundheitssystem, das für alle
-        zugänglich ist, Teilhabe am sozialen, kulturellen und politischen Leben,
-        sowie eine Wirtschaft, die nicht auf der Ausbeutung von Mensch und
-        Umwelt beruht.
+        Konkret heisst das für die Stadt Winterthur:
+        <ul className="ml-4 list-disc">
+          <li>
+            gemeinnützigen und klimaverträglichen Wohnungsbau selbst in die Hand
+            nehmen anstatt Privaten überlassen
+          </li>
+          <li>
+            einen Mindestanteil an preisgünstigen Wohnungen bei Mehrausnützungen
+            sichern
+          </li>
+          <li>ein Vorkaufsrecht für Gemeinden bei Wohnliegenschaften</li>
+          <li>mehr gemeinschaftliche, unkommerzielle Freiräume</li>
+        </ul>
       </p>
-      <p className="mt-3 w-full max-w-[800px] text-justify">
-        «ALLES FÜR ALLE» HEISST SOLIDARITÄT ZU LEBEN! Wir wollen ein System, das
-        nicht von der Wirtschaft und dem Profit diktiert ist, sondern der
-        gesamten Gesellschaft dient und allen Lebewesen Sorge trägt.
+      <p className="my-3 w-full max-w-[800px] text-justify">
+        Die Wohnungsnot ist eng mit der ökologischen, sozialen und ökonomischen
+        Krise verknüpft. Darum steht das 1. Mai Komitee gemeinsam für ein Winti
+        ein , das den Menschen und nicht dem Profit gehört. Denn: Ein
+        vielfältiges, durchmischtes Winterthur bedeutet eine lebenswerte Stadt
+        für uns alle!
       </p>
-      <p className="mt-3 w-full max-w-[800px] text-justify">
-        BEGINNEN WIR JETZT IN WINTERTHUR - mit Massnahmen für Netto Null bis
-        spätestens 2040, einem kommunalen Mindestlohn, mehr öffentlichem Verkehr
-        statt Autos und mehr kostengünstigem, genossenschaftlichem Wohnen!
-      </p>
+      <h2 className="mt-3 text-xl font-bold lg:text-2xl">
+        Bilder des letzten 1. Mai
+      </h2>
       <CarouselWrapper
         images={[
           "/DSC_0637.jpeg",
