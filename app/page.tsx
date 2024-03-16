@@ -8,10 +8,10 @@ export default function Home() {
         1 Mai Winterthur 2023
       </h1>
       <Image
-        src="/alles_fuer_alle_banner.png"
+        src="/1Mai_Banner_24.png"
         width={800}
         height={800}
-        alt="alles-fuer-alle"
+        alt="Winti den Menschen nicht dem Profit Banner"
       />
       <h2 className="mt-3 text-xl font-bold lg:text-2xl">Programm</h2>
       <p className="w-full max-w-[800px] text-justify">

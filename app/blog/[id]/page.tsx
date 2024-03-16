@@ -25,10 +25,10 @@ export default async function page({ params }: { params: { id: string } }) {
           />
         ) : (
           <Image
-            src="/alles_fuer_alle_banner.png"
+            src="/1Mai_Banner_24.png"
             width={800}
             height={800}
-            alt="alles-fuer-alle"
+            alt="Winti den Menschen nicht dem Profit Banner"
             className="my-2"
           />
         )}

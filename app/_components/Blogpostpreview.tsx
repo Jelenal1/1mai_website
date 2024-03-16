@@ -7,9 +7,12 @@ export default function Blogpostpreview({ article }: { article: article }) {
       <h3>{article.author}</h3>
       <h4 className="text-sm">{article.date}</h4>
       {article.imageurl ? (
-        <img src={article.imageurl} alt="" />
+        <img src={article.imageurl} alt={article.title + " Bild"} />
       ) : (
-        <img src="/alles_fuer_alle_banner.png" alt="" />
+        <img
+          src="/1Mai_Banner_24.png"
+          alt="Winti den Menschen nicht dem Profit Banner"
+        />
       )}
       <p>{article.description}</p>
     </div>
