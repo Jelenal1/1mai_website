@@ -154,7 +154,7 @@ export default function AdminForm() {
             className="my-2"
           />
         ) : (
-          <img src="/alles_fuer_alle_banner.png" alt="" className="my-2" />
+          <img src="/1Mai_Banner_24.png" alt="Winti den Menschen nicht dem Profit Banner" className="my-2" />
         )}
         {formData.content.split("\n").map((paragraph, index) => (
           <p key={index} className="my-2">

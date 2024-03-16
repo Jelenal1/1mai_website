@@ -2,15 +2,21 @@
 import { auth } from "@/app/_components/firebase";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function page() {
   const router = useRouter();
+  const [error, setError] = useState<boolean>(false);
   async function handleLogin(data: FormData) {
     const email = data.get("email")?.toString();
     const password = data.get("password")?.toString();
     if (!email || !password) return;
-    await signInWithEmailAndPassword(auth, email, password);
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      console.log(error);
+      setError(true);
+    }
   }
 
   useEffect(() => {
@@ -28,6 +34,9 @@ export default function page() {
           Login
         </h1>
         <form action={handleLogin} className="flex flex-col gap-2">
+          {error && (
+            <p className="text-red-600">Falsches Passwort oder Email</p>
+          )}
           <input
             type="email"
             name="email"
@@ -41,7 +50,9 @@ export default function page() {
             autoComplete="current-password"
             required
             minLength={8}
-            className="border-x-2 border-black bg-transparent pl-2 text-lg outline-none valid:bg-green-300 invalid:bg-red-300 focus-within:bg-slate-300"
+            className={
+              "border-x-2 border-black bg-transparent pl-2 text-lg outline-none valid:bg-green-300 invalid:bg-red-300 focus-within:bg-slate-300"
+            }
           />
           <button type="submit">Submit</button>
         </form>

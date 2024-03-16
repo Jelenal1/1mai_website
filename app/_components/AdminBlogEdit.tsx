@@ -64,7 +64,7 @@ export default function AdminBlogEdit({
             className="absolute -right-2.5 top-5 text-4xl"
             onClick={() => setOnEdit(true)}
           >
-            ✏️Editieren
+            ✏️
           </button>
         )}
         <h1
@@ -106,10 +106,10 @@ export default function AdminBlogEdit({
           />
         ) : (
           <Image
-            src="/alles_fuer_alle_banner.png"
+            src="/1Mai_Banner_24.png"
             width={800}
             height={800}
-            alt="alles-fuer-alle"
+            alt="1 Mai Banner"
             className="my-2"
           />
         )}
