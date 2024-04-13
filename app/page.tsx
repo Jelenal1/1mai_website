@@ -30,7 +30,9 @@ export default function Home() {
         15:00 Peter Pana <br />
         16:00 Filterbank
       </p>
-      <h2 className="mt-3 text-2xl font-bold lg:text-2xl">Winti den Menschen nicht dem Profit</h2>
+      <h2 className="mt-3 text-2xl font-bold lg:text-2xl">
+        Winti den Menschen nicht dem Profit
+      </h2>
       <p className="w-full max-w-[800px] text-justify">
         Bezahlbarer Wohnraum ist ein Grundrecht. Im Sommer 2023 standen in
         Winterthur gerade mal 112 Wohnungen frei. Die Mieten steigen, während
