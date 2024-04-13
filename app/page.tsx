@@ -20,7 +20,7 @@ export default function Home() {
       </p>
       <h2 className="mt-3 text-xl font-bold lg:text-2xl">Reden</h2>
       <p className="w-full max-w-[800px] text-justify">
-        Rebecca Acquaro- N. (Feministisches Kollektiv)
+        Becca N. (Feministisches Kollektiv)
         <br /> VPOD, UNIA
         <br /> Valeria Muster (JUSO)
         <br /> Anna Rosenwasser (SP)
