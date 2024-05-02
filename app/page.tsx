@@ -16,23 +16,23 @@ export default function Home() {
         alt="Winti den Menschen nicht dem Profit Banner"
       />
       <h2 className="mt-5 text-xl font-bold lg:text-2xl">
-        Medienmitteilung zur Polizeigewalt am 1. Mai Fest
-      </h2>
-      <div className="mt-3 w-full max-w-[800px]">
-        <Suspense fallback={<div>Loading...</div>}>
-          <PdfViewer
-            src="/docs/MM_Polizeigewalt_1Mai_24.pdf"
-            className="h-[500px]"
-          />
-        </Suspense>
-      </div>
-      <h2 className="mt-5 text-xl font-bold lg:text-2xl">
         Allgemeine Medienmitteilung zum 1. Mai
       </h2>
       <div className="mt-3 w-full max-w-[800px]">
         <Suspense fallback={<div>Loading...</div>}>
           <PdfViewer
             src="/docs/MM_Allgemein_1Mai_24.pdf"
+            className="h-[500px]"
+          />
+        </Suspense>
+      </div>
+      <h2 className="mt-5 text-xl font-bold lg:text-2xl">
+        Medienmitteilung zur Polizeigewalt am 1. Mai Fest
+      </h2>
+      <div className="mt-3 w-full max-w-[800px]">
+        <Suspense fallback={<div>Loading...</div>}>
+          <PdfViewer
+            src="/docs/MM_Polizeigewalt_1Mai_24.pdf"
             className="h-[500px]"
           />
         </Suspense>
