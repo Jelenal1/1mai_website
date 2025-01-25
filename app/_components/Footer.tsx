@@ -30,12 +30,6 @@ export default function Footer() {
             Home
           </Link>
           <Link
-            href="/blog"
-            className="text-blue-600 underline hover:text-purple-600"
-          >
-            Blog
-          </Link>
-          <Link
             href="/spenden"
             className="text-blue-600 underline hover:text-purple-600"
           >
