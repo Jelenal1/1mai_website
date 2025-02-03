@@ -1,8 +1,8 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import Sidenav from "./Sidenav";
-import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -25,7 +25,6 @@ export default function Navbar() {
         <Sidenav open={open} setOpen={setOpen} />
         <div className="ml-20 hidden gap-10 text-xl lg:flex">
           <Link href={"/"}>Home</Link>
-          <Link href={"/blog"}>Blog</Link>
           <Link href={"/ueber-uns"}>Über uns</Link>
           <Link href={"/mitmachen"}>Mitmachen</Link>
           <button onClick={() => setOpenArchiv(!openArchiv)}>Archiv</button>
@@ -38,6 +37,7 @@ export default function Navbar() {
             : "invisible flex w-fit gap-2 transition-all"
         }
       >
+        <Link href={"/archive/2024"}>2024</Link>
         <Link href={"/archive/2023"}>2023</Link>
         <Link href={"/archive/2021"}>2021</Link>
         <Link href={"/archive/2020"}>2020</Link>
