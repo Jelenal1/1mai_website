@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "1 Mai Winterthur",
   description: "1 Mai Winterthur Website",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
