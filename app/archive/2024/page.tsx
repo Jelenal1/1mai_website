@@ -22,7 +22,7 @@ export default function Home() {
         <Suspense fallback={<div>Loading...</div>}>
           <PdfViewer
             src="/docs/MM_Allgemein_1Mai_24.pdf"
-            className="h-[500px]"
+            className="h-[1180px]"
           />
         </Suspense>
       </div>
@@ -33,7 +33,7 @@ export default function Home() {
         <Suspense fallback={<div>Loading...</div>}>
           <PdfViewer
             src="/docs/MM_Polizeigewalt_1Mai_24.pdf"
-            className="h-[500px]"
+            className="h-[1180px]"
           />
         </Suspense>
       </div>
@@ -83,19 +83,20 @@ export default function Home() {
       </p>
       <p className="mt-3 w-full max-w-[800px] text-justify">
         Konkret heisst das für die Stadt Winterthur:
-        <ul className="ml-4 list-disc">
-          <li>
-            gemeinnützigen und klimaverträglichen Wohnungsbau selbst in die Hand
-            nehmen anstatt Privaten überlassen
-          </li>
-          <li>
-            einen Mindestanteil an preisgünstigen Wohnungen bei Mehrausnützungen
-            sichern
-          </li>
-          <li>ein Vorkaufsrecht für Gemeinden bei Wohnliegenschaften</li>
-          <li>mehr gemeinschaftliche, unkommerzielle Freiräume</li>
-        </ul>
+        <br />
       </p>
+      <ul className="ml-4 list-disc">
+        <li>
+          gemeinnützigen und klimaverträglichen Wohnungsbau selbst in die Hand
+          nehmen anstatt Privaten überlassen
+        </li>
+        <li>
+          einen Mindestanteil an preisgünstigen Wohnungen bei Mehrausnützungen
+          sichern
+        </li>
+        <li>ein Vorkaufsrecht für Gemeinden bei Wohnliegenschaften</li>
+        <li>mehr gemeinschaftliche, unkommerzielle Freiräume</li>
+      </ul>
       <p className="my-3 w-full max-w-[800px] text-justify">
         Die Wohnungsnot ist eng mit der ökologischen, sozialen und ökonomischen
         Krise verknüpft. Darum steht das 1. Mai Komitee gemeinsam für ein Winti
@@ -107,6 +108,7 @@ export default function Home() {
         Bilder des letzten 1. Mai
       </h2>
       <CarouselWrapper
+        className="max-w-[800px]"
         images={[
           "/1Mai_demo_2024_1.jpg",
           "/1Mai_demo_2024_2.jpg",

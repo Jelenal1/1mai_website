@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="ml-20 hidden gap-10 text-xl lg:flex">
           <Link href={"/"}>Home</Link>
           <Link href={"/ueber-uns"}>Über uns</Link>
-          <Link href={"/mitmachen"}>Mitmachen</Link>
+          <Link href={"/mitmachen"}>Mit machen</Link>
           <button onClick={() => setOpenArchiv(!openArchiv)}>Archiv</button>
         </div>
       </div>

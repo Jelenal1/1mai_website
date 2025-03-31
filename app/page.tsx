@@ -1,17 +1,90 @@
+import Image from "next/image";
 import { Suspense } from "react";
 import CarouselWrapper from "./_components/CarouselWrapper";
 
 export default function Home() {
   return (
-    <main className="mx-9 mb-10 flex flex-col items-center">
+    <main className="mb-10 flex flex-col items-center">
+      <Image
+        src="/2025/1MaiWinti25_Website-Header.png"
+        alt="1 Mai Winterthur Logo, Umverteilen & Neues gestalten, Winti für alle!"
+        width={1080}
+        height={113}
+        loading="lazy"
+        className="h-auto w-full max-w-[1000px]"
+      />
       <h1 className="my-2 text-2xl font-bold lg:text-3xl">
         1 Mai Winterthur 2025
       </h1>
-
-      <p className="my-10 text-center">
-        Hier folgen Infos und Updates zum 1.Mai
+      <h3 className="mb-5 mt-10 text-2xl font-bold">Awareness</h3>
+      <p className="w-full max-w-[1000px]">
+        "Awareness" bezeichnet das Bewusstsein und die Aufmerksamkeit für
+        Situationen, in denen die Grenzen anderer überschritten werden oder
+        wurden. Dabei geht es um alle Formen von Diskriminierung und Gewalt, das
+        heisst um sexistisches, rassistisches, homo- und transfeindliches,
+        ableistisches Verhalten sowie Diskriminierung aufgrund
+        Religionszugehörigkeit oder anderweitig diskriminierendes Verhalten. Wir
+        möchten, dass sich alle wohl fühlen während der Demo und dem Fest. Und
+        wir möchten den von der Gewalt betroffenen Personen helfen und sie
+        begleiten. Ausserdem wollen wir zum Thema Awareness sensibilisieren.
+        <br />
       </p>
-      <h3 className="text-xl font-bold">Bilder des letzten 1. Mai 2024</h3>
+      <h3 className="mb-5 mt-10 text-xl font-bold">Nulltoleranz</h3>
+      <p className="w-full max-w-[1000px]">
+        Wir wollen den 1. Mai für alle sicher machen und wir tolerieren keine
+        Diskriminierung während der Demo und dem Fest. Das Awareness-Team
+        hinterfragt, beurteilt oder relativiert die Wahrnehmung der betroffenen
+        Person nicht. Das Awareness-Team ist immer auf der Seite der betroffenen
+        Person und ergreift Partei für sie.
+      </p>
+
+      <h3 className="mb-5 mt-10 text-xl font-bold">Anonymität</h3>
+      <p className="w-full max-w-[1000px]">
+        Alle Informationen werden vertraulich behandelt. Das Awareness-Team
+        unterliegt der Schweigepflicht.
+        <br />
+        Awareness-Teams während der Demo und dem Fest Während der Demo bewegen
+        sich vier Personen in violetten Westen durch die Menge, am Fest zwei
+        Personen. Sie sind Ansprechpersonen für Grenzüberschreitung, ganz egal,
+        ob du sie selbst erlebt oder beobachtet hast.
+      </p>
+      <div className="my-10 w-full max-w-[1000px] border-b border-black"></div>
+      <h3 className="mb-5 mt-10 text-xl font-bold">Programm</h3>
+      <ul className="mx-auto w-full max-w-[1000px] list-disc">
+        <li>10:30 Beginn der Demo auf dem Neumarkt</li>
+        <li>12:00 1. Mai Fest in der Reithalle Winterthur</li>
+        <li>
+          13:00 Reden von:
+          <ul className="list-inside list-disc">
+            <li>
+              <strong>Mattea Meyer</strong>, Nationalrätin, Co-Präsidentin SP
+              Schweiz
+            </li>
+            <li>
+              <strong>Michèle Dünki-Bättig</strong>, Co-Präsidentin VPOD Zürich,
+              Kantonsrätin
+            </li>
+            <li>
+              <strong>Bea Albermann</strong>, Ärztin und Aktivistin
+            </li>
+            <li>
+              Weitere Reden von <strong>Monda Futura</strong>, von der{" "}
+              <strong>AL</strong> und Gewerkschaftsmitgliedern der{" "}
+              <strong>UNIA</strong> und des <strong>VPOD</strong>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3 className="mb-5 mt-10 text-xl font-bold">Route</h3>
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1ryRullQnH14yuwy8OUZrP1yloOcEchU&ehbc=2E312F&noprof=1"
+        height="500"
+        className="w-full max-w-[1000px]"
+      ></iframe>
+
+      <h3 className="mb-5 mt-10 text-xl font-bold">
+        Bilder des letzten 1. Mai 2024
+      </h3>
       <Suspense>
         <div className="h-fit">
           <CarouselWrapper
