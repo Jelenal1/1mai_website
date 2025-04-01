@@ -101,7 +101,7 @@ export default function Home() {
             height={1350}
           />
           <Image
-            src="/2025/Bea_Albermann.png"
+            src="/2025/Bea_albermann.png"
             alt="Bea Albermann"
             width={1080}
             height={1350}
