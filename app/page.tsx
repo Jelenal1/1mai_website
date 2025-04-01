@@ -74,6 +74,17 @@ export default function Home() {
             </li>
           </ul>
         </li>
+        <li>
+          15:00 Musik
+          <ul className="list-inside list-disc">
+            <li>
+              <strong>Myla Ley</strong>
+            </li>
+            <li>
+              <strong>OleKanone & Nova</strong>
+            </li>
+          </ul>
+        </li>
       </ul>
       <h3 className="mb-5 mt-10 text-xl font-bold">Route</h3>
       <iframe
