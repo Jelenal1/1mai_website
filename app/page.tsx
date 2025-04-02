@@ -79,7 +79,7 @@ export default function Home() {
             15:00 Musik
             <ul className="list-inside list-disc">
               <li>
-                <strong>Myla Ley</strong>
+                <strong>Myla Lei</strong>
               </li>
               <li>
                 <strong>OleKanone & Nova</strong>
@@ -114,7 +114,7 @@ export default function Home() {
             height={1350}
           />
           <Image
-            src="/2025/Myla_ley.png"
+            src="/2025/Myla_lei.png"
             alt="Myla Ley"
             width={1080}
             height={1350}
