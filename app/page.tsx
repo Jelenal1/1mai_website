@@ -114,7 +114,7 @@ export default function Home() {
             height={1350}
           />
           <Image
-            src="/2025/Mila_ley.png"
+            src="/2025/Myla_ley.png"
             alt="Myla Ley"
             width={1080}
             height={1350}
