@@ -13,10 +13,17 @@ export default function Home() {
         loading="lazy"
         className="h-auto w-full max-w-[1000px]"
       />
-      <div className="mx-2">
-        <h1 className="my-2 text-2xl font-bold lg:text-3xl">
+      <div className="mx-1">
+        <h1 className="my-2 mt-5 text-2xl font-bold lg:text-3xl">
           1 Mai Winterthur 2025
         </h1>
+        <h3 className="mt-10 text-2xl font-bold">Route</h3>
+        <h3 className="mb-5">Dieses Jahr starten wir auf dem Neumarkt</h3>
+        <iframe
+          src="https://www.google.com/maps/d/u/0/embed?mid=1ryRullQnH14yuwy8OUZrP1yloOcEchU&ehbc=2E312F&noprof=1"
+          height="500"
+          className="w-full max-w-[1000px]"
+        ></iframe>
         <h3 className="mb-5 mt-10 text-2xl font-bold">Awareness</h3>
         <p className="w-full max-w-[1000px]">
           "Awareness" bezeichnet das Bewusstsein und die Aufmerksamkeit für
@@ -51,7 +58,7 @@ export default function Home() {
         </p>
         <div className="my-10 w-full max-w-[1000px] border-b border-black"></div>
         <h3 className="mb-5 mt-10 text-xl font-bold">Programm</h3>
-        <ul className="mx-auto w-full max-w-[1000px] list-disc">
+        <ul className="mx-auto w-full max-w-[1000px] list-outside list-disc pl-4">
           <li>10:30 Beginn der Demo auf dem Neumarkt</li>
           <li>12:00 1. Mai Fest in der Reithalle Winterthur</li>
           <li>
@@ -87,7 +94,7 @@ export default function Home() {
             </ul>
           </li>
         </ul>
-        <div className="mx-auto mt-10 grid max-w-[1000px] grid-cols-2 gap-2 lg:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-[1000px] gap-2 sm:grid-cols-2 lg:grid-cols-3">
           <Image
             src="/2025/Mattea_meyer.png"
             alt="Mattea Meyer"
@@ -121,13 +128,6 @@ export default function Home() {
           />
         </div>
         <div className="my-10 w-full max-w-[1000px] border-b border-black"></div>
-        <h3 className="mb-5 mt-10 text-xl font-bold">Route</h3>
-        <iframe
-          src="https://www.google.com/maps/d/u/0/embed?mid=1ryRullQnH14yuwy8OUZrP1yloOcEchU&ehbc=2E312F&noprof=1"
-          height="500"
-          className="w-full max-w-[1000px]"
-        ></iframe>
-
         <h3 className="mb-5 mt-10 text-xl font-bold">
           Bilder des letzten 1. Mai 2024
         </h3>
