@@ -17,6 +17,66 @@ export default function Home() {
         <h1 className="my-2 mt-5 text-2xl font-bold lg:text-3xl">
           1 Mai Winterthur 2025
         </h1>
+        <p className="mb-5 w-full max-w-[1000px] text-xl font-bold">
+          Winterthur muss eine Stadt sein, die lebt, verbindet und für alle da
+          ist – egal wie viel du verdienst, woher du kommst oder welchen
+          Abschluss du hast: eine Stadt mit Platz zum Wohnen, der bezahlbar ist,
+          mit Bildung für alle, grünen Oasen gegen die Hitze und mit Quartieren,
+          die pulsieren und vernetzen. Am 1. Mai tragen wir diese Vision auf die
+          Strasse – gemeinsam, laut und bunt!
+        </p>
+        <p className="mb-5 w-full max-w-[1000px]">
+          «Winti für alle!» heisst ein lebenswertes Winterthur zu schaffen; eine
+          Stadt, die allen etwas zu bieten hat. Eine Stadt, wo grüne Natur
+          während der Hitzesommer Erholung bietet und für ruhige Quartiere
+          sorgt. Wo Begegnungszonen und öffent liche Räume Orte sind, die allen
+          zur Ver fügung stehen, wo Menschen zusammen kommen, sich austauschen
+          und so eine Stadt schaffen, die lebt und verbindet. Wo Freiräume für
+          kulturelles Schaffen und Gemeinschaft existieren. Wo Familien, junge
+          und betagte Menschen, Studieren de eine hochwertige und vor allem
+          bezahl bare Wohnung finden. In Winterthur zu wohnen, arbeiten und zu
+          leben darf nicht zu einem Privileg der Reichen werden.
+        </p>
+        <p className="mb-5 w-full max-w-[1000px]">
+          Doch der aktuelle Sparkurs der bürger lichen Mehrheit im
+          Stadtparlament steht diesem Anliegen quer entgegen. Das Budget wurde
+          um fast 9 Millionen Franken gekürzt. Zuvor wurden bereits 600’000
+          Franken bei der Kulturförderung gestrichen. Und auf kantonaler Ebene
+          drohen weitere Kürzungen: Die geplante Steuergesetzrevision im Kanton
+          Zürich bedeuten für Winterthur einen weiteren Einnahmeausfall von 9
+          Millionen Franken pro Jahr. Diese Steuervorlage ist nichts anderes als
+          Steuergeschenke an die Unternehmen, auf Kosten von Bildung, Sozialem,
+          Kultur oder Klimaschutz. Dagegen haben linke Parteien und Ge
+          werkschaften das Referendum ergriffen.
+        </p>
+        <p className="mb-5 w-full max-w-[1000px]">
+          Die bürgerlichen Verbände stellen sich auch quer gegen den
+          Mindestlohn, den 65% der Stimmberechtigen 2023 fordern, und haben
+          Rekurs eingelegt. Dieser verhindert die Einführung des fairen
+          Mindestlohnlohns, der allen Menschen in Winterthur einen Lohn zum
+          Leben garantiert. Dies ist ein direkter Angriff auf faire Löhne und
+          demokratische Ent scheide der Bevölkerung.
+        </p>
+        <p className="mb-5 w-full max-w-[1000px]">
+          «Winti für alle!» ist unsere Antwort auf ihre Politik. Wir alle, die
+          in und um Winterthur leben, arbeiten oder in Ausbildung sind, wir
+          wollen und können aus unserer Stadt einen lebenswerten Ort machen.
+        </p>
+        <p className="mb-5 w-full max-w-[1000px] text-xl font-bold">
+          Deswegen nehmen wir uns heute laut und bunt die Strassen. Am 1. Mai
+          kämpfen wir gemeinsam für ein besseres Leben für alle. Wir wollen den
+          1. Mai für alle sicher machen und wir tolerieren keine Diskri-
+          minierung und Gewalt jeglicher Form während der Demo und dem Fest.
+          Melde dich bei Grenzüberschreitungen bei den Personen in
+          Sicherheitswesten.
+        </p>
+        <h3 className="mb-5 mt-10 text-3xl font-bold">
+          Für ein Winti für alle!
+        </h3>
+        <h4 className="mb-5 mt-10 text-xl font-bold">
+          Das 1. MaiKomitee Winterthur
+        </h4>
+        <div className="my-10 w-full max-w-[1000px] border-b border-black"></div>
         <h3 className="mt-10 text-2xl font-bold">Route</h3>
         <h3 className="mb-5">Dieses Jahr starten wir auf dem Neumarkt</h3>
         <iframe
